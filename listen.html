@@ -45,6 +45,9 @@
         border-radius: 0 0 1rem 1rem;
         box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         margin-bottom: 1.5rem;
+         /* Make it full width */
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
     }
 
     /* Section container to center content and add spacing */
@@ -117,6 +120,7 @@
         box-shadow: 0 3px 8px rgba(0,0,0,0.05);
         color: #0d1b4c;
         font-family: 'Noto Serif SC', serif;
+        margin-bottom: 1.5rem;
     }
     .question-header {
         background-color: #f8d6c3;
@@ -156,6 +160,8 @@
         cursor: pointer;
         transition: transform 0.2s ease, box-shadow 0.2s ease;
         white-space: nowrap;
+        display: block;
+        margin: 0 auto 2rem auto;
     }
     .submit-btn:hover {
         transform: translateY(-5px);
@@ -229,18 +235,15 @@
 
 <!-- Main Content -->
 <div class="container text-center mb-4">
-    <div class="title-bar">洗耳恭“听”</div>
+    <div class="title-bar text-center">洗耳恭“听”</div>
 </div>
 
 <section class="container">
-    <!-- Audio and Submit Button Row -->
-    <div class="d-flex justify-content-center align-items-center my-4 gap-3">
+    <!-- Audio Row -->
+    <div class="d-flex justify-content-center my-4">
         <div class="audio-bubble">
             🔊 <span>1'50</span>
         </div>
-        <button class="submit-btn" type="submit">
-            提交
-        </button>
     </div>
 
     <!-- Question -->
@@ -249,6 +252,11 @@
         <div class="option">沙嗲</div>
         <div class="option">南瓜派</div>
     </div>
+
+    <!-- Submit Button below question -->
+    <button class="submit-btn" type="submit">
+        提交
+    </button>
 </section>
 
 <!-- Footer -->
@@ -257,4 +265,4 @@
 </div>
 
 </body>
-</html
+</html>
