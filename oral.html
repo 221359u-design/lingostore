@@ -45,9 +45,6 @@
         border-radius: 0 0 1rem 1rem;
         box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         margin-bottom: 1.5rem;
-         /* Make it full width */
-        width: 100vw;
-        margin-left: calc(-50vw + 50%);
     }
 
     /* Section container to center content and add spacing */
@@ -159,60 +156,47 @@
         padding: 0.4rem 0;
         box-shadow: 0 -3px 10px rgba(0,0,0,0.1);
     }
-      /* Bubble styles */
-  .bubble {
-    background-color: #ffffff;
-    border-radius: 1rem;
-    border: 3px solid #0d1b4c;
-    padding: 1rem 1.5rem;
-    box-shadow: 2px 6px 12px rgba(0,0,0,0.1);
-    font-family: 'Noto Serif SC', serif;
-    color: #0d1b4c;
-    max-width: 800px;
-    margin: 0 auto 1.5rem auto;
-  }
 
-  .bubble-title {
-    font-family: 'Noto Sans SC', sans-serif;
-    font-weight: 700;
-    font-size: 1.3rem;
-    margin-bottom: 0.75rem;
-  }
+    /* Bubble styles */
+    .bubble {
+      background-color: #ffffff;
+      border-radius: 1rem;
+      border: 3px solid #0d1b4c;
+      padding: 1rem 1.5rem;
+      box-shadow: 2px 6px 12px rgba(0,0,0,0.1);
+      font-family: 'Noto Serif SC', serif;
+      color: #0d1b4c;
+      max-width: 800px;
+      margin: 0 auto 1.5rem auto;
+    }
 
-  /* Audio bubble smaller */
-  .audio-bubble {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 1.2rem;
-    padding: 0.6rem 1.2rem;
-    border: 2px solid #0d1b4c;
-    border-radius: 50px;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-    font-family: 'Noto Serif SC', serif;
-    color: #0d1b4c;
-    margin: 0 auto 1.5rem auto;
-    max-width: 200px;
-    justify-content: center;
-  }
+    .bubble-title {
+      font-family: 'Noto Sans SC', sans-serif;
+      font-weight: 700;
+      font-size: 1.3rem;
+      margin-bottom: 0.75rem;
+    }
 
-  /* Mic */
-  .mic {
-    font-size: 2.5rem;
-    text-align: center;
-    margin: 2rem 0;
-    cursor: pointer;
-    user-select: none;
-  }
-  /* Title bar */
-    .title-bar {
-        background: linear-gradient(90deg, #9ed2e6, #b5ead7);
-        font-weight: bold;
-        font-size: 2rem;
-        padding: 1rem;
-        border-radius: 0 0 1rem 1rem;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        margin-bottom: 1.5rem;
+    /* Audio bubble modified */
+    .audio-bubble {
+      border-radius: 1rem;
+      border: 2px solid #0d1b4c;
+      background: #fff;
+      padding: 1rem 1.5rem;
+      max-width: 800px;
+      margin: 0 auto 1.5rem auto;
+      font-size: 1.1rem;
+      color: #0d1b4c;
+      font-family: 'Noto Serif SC', serif;
+    }
+
+    /* Mic */
+    .mic {
+      font-size: 2.5rem;
+      text-align: center;
+      margin: 2rem 0;
+      cursor: pointer;
+      user-select: none;
     }
 </style>
 </head>
@@ -240,30 +224,30 @@
 
 <!-- Main Content -->
 <section>
-    <!-- Title -->
-<div class="container">
-      <div class="title-bar text-center">侃侃而谈</div>
-</div>
+  <!-- Title -->
+  <div class="container">
+    <div class="title-bar text-center">侃侃而谈</div>
+  </div>
 
-<!-- Prompt Bubble -->
-<div class="bubble normal-cn">谈谈你平时喜欢吃的美食</div>
+  <!-- Prompt Bubble -->
+  <div class="bubble normal-cn">谈谈你平时喜欢吃的美食</div>
 
-<!-- Audio Bubble -->
-<div class="audio-bubble">🔊 0'39</div>
+  <!-- Audio Bubble -->
+  <div class="audio-bubble">
+    这是一个示例音频文本框，您可以在这里显示音频内容的描述或转录文本。lxytsl
+  </div>
 
-<!-- Paragraph Bubble -->
-<div class="bubble">
-  <div class="bubble-title">评语：</div>
-  <p>这段描述表达清晰，用词简单易懂。你很坦然介绍了自己喜欢的新加坡美食，并具体说明了喜欢的原因，比如“鸡肉海南饭”、“香味浓郁”等，能让读者感受到你对食物的喜爱。</p>
-  <p>可以改进的地方是：试着加入一些令人感受或小故事，例如某次吃海南鸡饭的特别经历，或者和家人一起去小贩中心的回忆，这样能让内容更有温度，也更吸引人阅读。</p>
-  <p>整体来说，这段内容真实，有条理，是一个不错的美食分享段落！</p>
-</div>
+  <!-- Paragraph Bubble -->
+  <div class="bubble">
+    <div class="bubble-title">评语：</div>
+    <p>这段描述表达清晰，用词简单易懂。你很坦然介绍了自己喜欢的新加坡美食，并具体说明了喜欢的原因，比如“鸡肉海南饭”、“香味浓郁”等，能让读者感受到你对食物的喜爱。</p>
+    <p>可以改进的地方是：试着加入一些令人感受或小故事，例如某次吃海南鸡饭的特别经历，或者和家人一起去小贩中心的回忆，这样能让内容更有温度，也更吸引人阅读。</p>
+    <p>整体来说，这段内容真实，有条理，是一个不错的美食分享段落！</p>
+  </div>
 
-<!-- Mic -->
-<div class="mic" aria-label="麦克风按钮" role="button" tabindex="0">🎤</div>
-
+  <!-- Mic -->
+  <div class="mic" aria-label="麦克风按钮" role="button" tabindex="0">🎤</div>
 </section>
-
 
 <!-- Footer -->
 <div class="footer-bar fixed-bottom text-center">
