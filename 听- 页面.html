@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>洗耳恭听</title>
+
+<!-- Similar web fonts -->
+<link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&family=Noto+Sans+SC:wght@700&family=Noto+Serif+SC&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        margin: 0;
+        background-color: #fff3e0;
+    }
+
+    .title-font {
+        font-family: '优设自由棒棒体', 'ZCOOL KuaiLe', 'Microsoft YaHei', sans-serif;
+    }
+
+    .bold-small {
+        font-family: '字由点字简宋95', 'Noto Sans SC', sans-serif;
+        font-weight: 700;
+    }
+
+    .normal-cn {
+        font-family: '字由点宋', 'Noto Serif SC', serif;
+    }
+
+    /* Top bar */
+    .top-bar {
+        background-color: #f8d6c3;
+        height: 8vh;
+        display: flex;
+        align-items: center;
+        padding: 0 4vw;
+    }
+
+    .menu-icon {
+        width: 8vw;
+        height: 8vw;
+        border-radius: 50%;
+        background: linear-gradient(#a32564, #d96a8a);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 6vw;
+        color: white;
+        cursor: pointer;
+    }
+
+    /* Title */
+    .title {
+        text-align: center;
+        font-size: 8vw;
+        font-weight: bold;
+        margin: 4vh 0 3vh 0;
+    }
+
+    /* Audio bubble */
+    .audio-bubble {
+        background: white;
+        display: inline-block;
+        padding: 2vh 4vw;
+        border: 2px solid black;
+        border-radius: 20px;
+        font-size: 5vw;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        gap: 2vw;
+    }
+
+    .audio-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 6vh;
+    }
+
+    /* Question bubble */
+    .question-bubble {
+        background: white;
+        border: 2px solid black;
+        border-radius: 15px;
+        width: 85%;
+        margin: 0 auto;
+        padding: 2vh 3vw;
+    }
+
+    .question-header {
+        background-color: #f8d6c3;
+        padding: 1vh 2vw;
+        font-size: 4.5vw;
+        margin-bottom: 2vh;
+    }
+
+    .option {
+        background-color: #f0f0f0;
+        padding: 1.5vh 2vw;
+        font-size: 4vw;
+        margin-bottom: 1.5vh;
+        border-radius: 8px;
+    }
+
+    /* Home */
+    .home-bar {
+        background-color: #f8d6c3;
+        display: flex;
+        justify-content: center;
+        padding: 1.5vh 0;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+    }
+
+    .home-icon {
+        font-size: 8vw;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<!-- Top Bar -->
+<div class="top-bar">
+    <div class="menu-icon">≡</div>
+</div>
+
+<!-- Title -->
+<div class="title title-font">洗耳恭“听”</div>
+
+<!-- Audio -->
+<div class="audio-container">
+    <div class="audio-bubble normal-cn">🔊 1'50</div>
+</div>
+
+<!-- Question -->
+<div class="question-bubble">
+    <div class="question-header bold-small">Q1: 以下哪个是新加坡的传统美食</div>
+    <div class="option normal-cn">沙嗲</div>
+    <div class="option normal-cn">南瓜派</div>
+</div>
+
+<!-- Home -->
+<div class="home-bar">
+    <div class="home-icon">🏠</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>博览群书</title>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&family=Noto+Sans+SC:wght@700&family=Noto+Serif+SC&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        margin: 0;
+        font-family: '字由点宋', 'Noto Serif SC', serif;
+        background-color: #FFF3E0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    /* Top Menu Button */
+    .menu-btn {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        width: 35px;
+        height: 35px;
+        background: #EFA1C2;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .menu-btn div {
+        width: 60%;
+        height: 4px;
+        background: #291B36;
+        border-radius: 2px;
+        position: relative;
+    }
+    .menu-btn div::before,
+    .menu-btn div::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        background: #291B36;
+        border-radius: 2px;
+        left: 0;
+    }
+    .menu-btn div::before {
+        top: -8px;
+    }
+    .menu-btn div::after {
+        bottom: -8px;
+    }
+
+    /* Title */
+    h1 {
+        font-family: '优设自由棒棒体', 'ZCOOL KuaiLe', cursive;
+        text-align: center;
+        font-size: 2.5rem;
+        color: #0B1F3A;
+        margin-top: 60px;
+        margin-bottom: 20px;
+    }
+
+    /* Main text box */
+    .story-box {
+        background: white;
+        border-radius: 10px;
+        margin: 0 auto;
+        width: 90%;
+        padding: 15px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .story-box h2 {
+        font-family: '字由点字简宋95', 'Noto Sans SC', sans-serif;
+        font-size: 1rem;
+        font-weight: bold;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+    .story-box p {
+        margin: 0;
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    /* Word list box */
+    .word-box {
+        background: #FDD8C0;
+        border-radius: 10px;
+        margin: 20px auto;
+        width: 90%;
+        padding: 15px;
+    }
+    .word-box h3 {
+        font-family: '字由点字简宋95', 'Noto Sans SC', sans-serif;
+        font-size: 1rem;
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+    .word-box p {
+        margin: 4px 0;
+        font-size: 0.95rem;
+    }
+
+    /* Footer */
+    footer {
+        background: #FDD8C0;
+        text-align: center;
+        padding: 10px;
+        margin-top: auto;
+    }
+    .home-icon {
+        width: 28px;
+        height: 28px;
+        display: inline-block;
+        background: #0B1F3A;
+        clip-path: polygon(50% 0%, 100% 40%, 100% 100%, 0% 100%, 0% 40%);
+    }
+
+</style>
+</head>
+<body>
+
+<!-- Menu Button -->
+<div class="menu-btn">
+    <div></div>
+</div>
+
+<!-- Title -->
+<h1>博览群书</h1>
+
+<!-- Story -->
+<div class="story-box">
+    <h2>刻舟求剑</h2>
+    <p>从前，楚国有个人坐船渡江。船行到半路，他一不小心，把剑掉到了江里。他赶紧在船舷上刻了个记号，说：“我的剑从这里掉下去的。”船靠岸后，这个人就按照船上的记号， 在船停泊的地方下水捞剑。可是，剑早已随船的移动而漂走了。</p>
+</div>
+
+<!-- Vocabulary -->
+<div class="word-box">
+    <h3>生词生字</h3>
+    <p>1. 刻：用刀在东西上面划出痕迹，比如在木头上刻字。</p>
+    <p>2. 靠岸：船开到河边停下来。</p>
+    <p>3. 停泊：船停下来的。</p>
+    <p>4. 船舷：船的边缘部分，也就是人坐在船边可以伸手碰到的地方。</p>
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="home-icon"></div>
+</footer>
+
+</body>
+</html>
