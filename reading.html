@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>博览群书</title>
+
+<!-- Bootstrap 5.3.0 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&family=Pacifico&family=Noto+Sans+SC:wght@700&family=Noto+Serif+SC&display=swap" rel="stylesheet" />
+
+<style>
+  /* Background gradient */
+  body {
+    background: linear-gradient(180deg, #ffe7cc, #fff5ec);
+    font-family: 'ZCOOL KuaiLe', 'Microsoft YaHei', sans-serif;
+    min-height: 100vh;
+    margin: 0;
+  }
+
+  /* Top bar */
+  nav.bar-bg {
+    background: linear-gradient(90deg, #ffb3ba, #ffdfba);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    padding: 0.75rem 1rem;
+  }
+
+  /* Menu icon */
+  .menu-btn {
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #0d1b4c;
+  }
+
+  /* Title bar styling */
+  #page-title {
+    background: linear-gradient(90deg, #9ed2e6, #b5ead7);
+    font-weight: bold;
+    font-size: 2.5rem;
+    padding: 1rem 1.5rem;
+    border-radius: 0 0 1rem 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    color: #0d1b4c;
+    font-family: 'Pacifico', cursive;
+  }
+
+  /* Story card */
+  .story-card {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    border: 3px solid #0d1b4c;
+    padding: 1.25rem 1.5rem;
+    box-shadow: 2px 6px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Noto Serif SC', serif;
+    color: #0d1b4c;
+  }
+
+  /* Small bold text */
+  .small-bold {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-weight: 700;
+  }
+
+  /* Vocabulary card */
+  .vocab-card {
+    background-color: #fdd9c4;
+    border-radius: 1rem;
+    padding: 1rem 1.25rem;
+    font-family: 'Noto Serif SC', serif;
+    color: #0d1b4c;
+  }
+
+  .vocab-card .small-bold {
+    margin-bottom: 0.5rem;
+  }
+
+  /* Offcanvas sidebar */
+  .offcanvas {
+    background: linear-gradient(90deg, #ffb3ba, #ffdfba);
+    color: #0d1b4c;
+  }
+
+  .offcanvas-header,
+  .offcanvas-body {
+    padding: 1rem 1.5rem;
+  }
+
+  .offcanvas-title {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.6rem;
+  }
+
+  .offcanvas ul li {
+    padding: 0.5rem 0;
+    font-size: 1.3rem;
+    cursor: pointer;
+  }
+
+  .offcanvas ul li:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 0.5rem;
+  }
+
+  /* Bottom home bar */
+  .home-bar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #ffb3ba, #ffdfba);
+    box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 0;
+    text-align: center;
+  }
+
+  .home-icon {
+    font-size: 2rem;
+    color: #0d1b4c;
+    user-select: none;
+  }
+</style>
+</head>
+<body>
+
+<!-- Top Menu -->
+<nav class="bar-bg d-flex justify-content-start">
+  <span class="menu-btn" data-bs-toggle="offcanvas" data-bs-target="#mainMenu" aria-label="Toggle menu">☰</span>
+</nav>
+
+<!-- Offcanvas Sidebar -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="mainMenu" aria-labelledby="mainMenuLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="mainMenuLabel">菜单</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="list-unstyled">
+      <li>🏠 首页</li>
+      <li>🎮 游戏</li>
+      <li>📚 课程</li>
+      <li>👤 我的账户</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Title -->
+<div class="container text-center mb-4">
+  <div id="page-title">博览群书</div>
+</div>
+
+<!-- Story Card -->
+<div class="container mb-4">
+  <div class="story-card" id="story-content"></div>
+</div>
+
+<!-- Vocabulary Card -->
+<div class="container mb-5">
+  <div class="vocab-card">
+    <div class="small-bold" id="vocab-title"></div>
+    <ol id="vocab-list" class="mb-0"></ol>
+  </div>
+</div>
+
+<!-- Bottom Home Bar -->
+<div class="home-bar">
+  <span class="home-icon">🏠</span>
+</div>
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  // Content Data
+  const pageData = {
+    title: "博览群书",
+    story: {
+      heading: "刻舟求剑",
+      text: "从前，楚国有个人坐船渡江。船行到半路，他一不小心，把剑掉到了江里。他赶紧在船舷上刻了个记号，说：“我的剑从这里掉下去的。”船靠岸后，这个人就按照船上的记号，在船停泊的地方下水捞剑。可是，剑早已随着船的移动而漂走了。"
+    },
+    vocab: {
+      title: "生词生字",
+      words: [
+        "刻：用刀在东西上面划出痕迹，比如在木头上刻字。",
+        "靠岸：船开到河边停下来。",
+        "停泊：船停下来的。",
+        "船舷：船的边缘部分，也就是人坐在船边可以伸手碰到的地方。"
+      ]
+    }
+  };
+
+  // Render Function
+  function renderPage(data) {
+    document.getElementById('page-title').textContent = data.title;
+
+    document.getElementById('story-content').innerHTML = `
+      <h5 class="small-bold mb-2">${data.story.heading}</h5>
+      <p>${data.story.text}</p>
+    `;
+
+    document.getElementById('vocab-title').textContent = data.vocab.title;
+    const vocabList = document.getElementById('vocab-list');
+    vocabList.innerHTML = '';
+    data.vocab.words.forEach(word => {
+      const li = document.createElement('li');
+      li.textContent = word;
+      vocabList.appendChild(li);
+    });
+  }
+
+  renderPage(pageData);
+</script>
+
+</body>
+</html>
