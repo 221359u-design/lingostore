@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>笔下生花</title>
+
+<!-- Bootstrap 5.3.0 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&family=Pacifico&family=Noto+Sans+SC:wght@700&family=Noto+Serif+SC&display=swap" rel="stylesheet" />
+
+<style>
+  body {
+    background: linear-gradient(180deg, #ffe7cc, #fff5ec);
+    font-family: 'ZCOOL KuaiLe', 'Microsoft YaHei', sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    color: #0d1b4c;
+  }
+
+  /* Top bar */
+  nav.bar-bg {
+    background: linear-gradient(90deg, #ffb3ba, #ffdfba);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Menu icon */
+  .menu-btn {
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #0d1b4c;
+    user-select: none;
+  }
+
+  /* Title bar styling */
+  #page-title {
+    background: linear-gradient(90deg, #9ed2e6, #b5ead7);
+    font-weight: bold;
+    font-size: 2.5rem;
+    padding: 1rem 1.5rem;
+    border-radius: 0 0 1rem 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    color: #0d1b4c;
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+    margin: 0 0 1.5rem 0;
+  }
+
+  /* Image container with padding and rounded corners */
+  .image-container {
+    background-color: #f5d3c3;
+    border-radius: 1rem;
+    max-width: 350px;
+    margin: 0 auto 2rem auto;
+    padding: 1rem;
+  }
+
+  .image-container img {
+    width: 100%;
+    display: block;
+    border-radius: 0.5rem;
+  }
+
+  /* Speech bubble style (now editable) */
+  .speech-bubble {
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+    padding: 1rem 1.5rem;
+    border: 3px solid #0d1b4c;
+    border-radius: 1rem;
+    font-family: 'Noto Serif SC', serif;
+    color: #0d1b4c;
+    box-shadow: 2px 6px 12px rgba(0,0,0,0.1);
+    min-height: 4rem;
+  }
+
+  /* Comment bubble without pointer, editable */
+  .comment-bubble {
+    max-width: 600px;
+    margin: 0 auto 3rem auto;
+    padding: 1rem 1.5rem;
+    border: 3px solid #0d1b4c;
+    border-radius: 1rem;
+    font-family: 'Noto Serif SC', serif;
+    color: #0d1b4c;
+    box-shadow: 2px 6px 12px rgba(0,0,0,0.1);
+    background: #fff;
+  }
+
+  .comment-title {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+    color: #0d1b4c;
+  }
+
+  .comment-text {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  /* Home bar */
+  .home-bar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #ffb3ba, #ffdfba);
+    box-shadow: 0 -3px 10px rgba(0,0,0,0.1);
+    padding: 0.5rem 0;
+    text-align: center;
+  }
+
+  .home-icon {
+    font-size: 2rem;
+    color: #0d1b4c;
+    user-select: none;
+  }
+
+  /* Offcanvas sidebar */
+  .offcanvas {
+    background: linear-gradient(90deg, #ffb3ba, #ffdfba);
+    color: #0d1b4c;
+  }
+
+  .offcanvas-header,
+  .offcanvas-body {
+    padding: 1rem 1.5rem;
+  }
+
+  .offcanvas-title {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.6rem;
+    color: #0d1b4c;
+  }
+
+  .offcanvas ul li {
+    padding: 0.5rem 0;
+    font-size: 1.3rem;
+    cursor: pointer;
+  }
+
+  .offcanvas ul li:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 0.5rem;
+  }
+</style>
+</head>
+<body>
+
+<!-- Top Menu -->
+<nav class="bar-bg">
+  <span class="menu-btn" data-bs-toggle="offcanvas" data-bs-target="#mainMenu" aria-label="Toggle menu">☰</span>
+</nav>
+
+<!-- Offcanvas Sidebar -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="mainMenu" aria-labelledby="mainMenuLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="mainMenuLabel">菜单</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="list-unstyled">
+      <li>🏠 首页</li>
+      <li>🎮 游戏</li>
+      <li>📚 课程</li>
+      <li>👤 我的账户</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Title -->
+<div class="container">
+  <div id="page-title">笔下生花</div>
+</div>
+
+<!-- Image -->
+<div class="image-container">
+  <img src="/mnt/data/a975adb6-eb5c-4222-92c2-5ae786f5164b.png" alt="漫画示例" />
+</div>
+
+<!-- Empty speech bubble (editable) -->
+<div class="speech-bubble" contenteditable="true"></div>
+
+<!-- Comment bubble (editable) -->
+<div class="comment-bubble" contenteditable="true">
+  <div class="comment-title">评语：</div>
+  <div class="comment-text">
+    这段文字语言通顺，情节自然，表达了孩子对树木生长的惊讶，富有童趣和生活气息，能够引起读者的共鸣。“树长得比我还快”这个理解很可爱！结尾的感叹句增强了情感表达，使文章更生动。
+  </div>
+</div>
+
+<!-- Bottom Home Bar -->
+<div class="home-bar">
+  <span class="home-icon">🏠</span>
+</div>
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
