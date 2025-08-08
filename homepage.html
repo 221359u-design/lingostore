@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project Lingo</title>
+
+<!-- Try loading similar fonts -->
+<link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&family=Pacifico&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        margin: 0;
+        background-color: #fff5ec;
+    }
+
+    /* Font setup */
+    .chinese-font {
+        font-family: '优设自由棒棒体', 'ZCOOL KuaiLe', 'Microsoft YaHei', sans-serif;
+    }
+
+    .project-font {
+        font-family: 'Rumba', 'Pacifico', cursive;
+    }
+
+    /* Top bar */
+    .top-bar {
+        background-color: #f8d6c3;
+        height: 8vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 4vw;
+        font-size: 5vw;
+    }
+
+    .menu-icon {
+        font-size: 8vw;
+        cursor: pointer;
+    }
+
+    .streak {
+        display: flex;
+        align-items: center;
+        gap: 2vw;
+        font-weight: bold;
+    }
+
+    /* Title */
+    .title-bar {
+        background-color: #9ed2e6;
+        text-align: center;
+        font-size: 6vw;
+        font-weight: bold;
+        padding: 2vh 0;
+    }
+
+    /* Buttons grid */
+    .buttons {
+        display: grid;
+        grid-template-columns: repeat(2, 35vw);
+        gap: 5vw;
+        justify-content: center;
+        margin: 5vh 0;
+    }
+
+    .btn {
+        height: 35vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12vw;
+        font-weight: bold;
+        border-radius: 4vw;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .btn-green {
+        background-color: #7be06a;
+        color: #0a285e;
+    }
+
+    .btn-blue {
+        background-color: #a6d3ec;
+        color: #0a285e;
+    }
+
+    /* Bottom section with characters */
+    .characters {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5vw;
+        margin-top: 2vh;
+        flex-wrap: wrap;
+    }
+
+    .characters img {
+        height: 25vh;
+        max-width: 40vw;
+    }
+
+    .project-name {
+        background: white;
+        padding: 1vh 4vw;
+        border-radius: 2vw;
+        border: 2px solid black;
+        font-size: 5vw;
+        text-align: center;
+    }
+
+    /* Home icon */
+    .home-bar {
+        background-color: #f8d6c3;
+        display: flex;
+        justify-content: center;
+        padding: 1.5vh 0;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+    }
+
+    .home-icon {
+        font-size: 8vw;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<!-- Top Bar -->
+<div class="top-bar">
+    <div class="menu-icon">☰</div>
+    <div class="streak">🔥 1</div>
+</div>
+
+<!-- Title -->
+<div class="title-bar chinese-font">连胜第一天</div>
+
+<!-- Buttons -->
+<div class="buttons chinese-font">
+    <div class="btn btn-green">听</div>
+    <div class="btn btn-blue">说</div>
+    <div class="btn btn-blue">读</div>
+    <div class="btn btn-blue">写</div>
+</div>
+
+<!-- Characters -->
+<div class="characters">
+    <img src="https://i.ibb.co/yhH5Q1n/girl.png" alt="Girl">
+    <div class="project-name project-font">Project Lingo</div>
+    <img src="https://i.ibb.co/WzVPL3R/boy.png" alt="Boy">
+</div>
+
+<!-- Home Icon -->
+<div class="home-bar">
+    <div class="home-icon">🏠</div>
+</div>
+
+</body>
+</html>
